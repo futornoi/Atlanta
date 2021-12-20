@@ -3,9 +3,8 @@ import Title from "../Title";
 import "./Home.scss";
 import DefaultInput from "../DefaultInput";
 import UserItem from "./UserItem";
-import { gitHubApi, IProfile, IUserResponse, IUsersResponse } from "../../api/GitHub";
+import { gitHubApi, IProfile, IUsersResponse } from "../../api/GitHub";
 import useDebounce from "../../hooks/useDebouce";
-import axios from "axios";
 
 const Home: React.FC = () => {
   const { getUsers, searchUsers } = gitHubApi;
@@ -55,7 +54,7 @@ const Home: React.FC = () => {
     initialUsers()
   }, [debouncedValue])
 
-  const isEmpty = !usersInfo;
+  const isEmpty = !usersInfo?.length;
 
   const userElement = usersInfo?.map(user => (
     <UserItem key={user.id} searchValue={inputValue} rep_count={user.public_repos} name={user?.login} avatar={user?.avatar_url}/>
