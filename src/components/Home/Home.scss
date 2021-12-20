@@ -1,0 +1,33 @@
+@import "src/styles/constants";
+@import "src/styles/mixins";
+
+.main {
+	.main-title {
+		text-align: center;
+	}
+
+	.main-searchInput {
+		margin-top: 20px;
+		input {
+			width: 100%;
+		}
+	}
+
+	.main__user-list {
+		margin-top: 30px;
+		border: $border;
+		border-radius: $border-radius;
+		height: 81vh;
+		overflow-y: auto;
+
+		h2 {
+			height: 100%;
+			@include flex(center, center);
+		}
+
+		&::-webkit-scrollbar {width: 4px;}
+		&::-webkit-scrollbar {height: 4px;}
+		&::-webkit-scrollbar-thumb {border-radius: 6px;background: $borderBlueColor;}
+		&:hover::-webkit-scrollbar-thumb {background: $borderBlueColor;}
+	}
+}

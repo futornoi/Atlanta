@@ -1,0 +1,24 @@
+@import "constants";
+
+.default-input {
+	position: relative;
+
+	input {
+		padding: 10px 24px;
+		font-size: 20px;
+		line-height: 20px;
+		color: $textColor;
+		vertical-align: middle;
+		background-color: $bgDark;
+		border: 1px solid $borderColor;
+		border-radius: $border-radius;
+		outline: none;
+
+		&:focus {
+			background-color: #0d1117;
+			border-color: $borderBlueColor;
+			outline: none;
+			box-shadow: $boxShadow;
+		}
+	}
+}

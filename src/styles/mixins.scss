@@ -1,0 +1,31 @@
+@mixin ellipsis($line:1) {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	@if $line == 1 {
+		white-space: nowrap;
+	} @else {
+		display: -webkit-box;
+		-webkit-line-clamp: $line;
+		-webkit-box-orient: vertical;
+	}
+}
+
+@mixin size($w, $h:$w, $bdrs:0,) {
+	width: $w;
+	height: $h;
+	border-radius: $bdrs;
+}
+
+@mixin flex($jc:center, $ai:center) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
+
+@mixin xl-desktop {
+	@media screen and (max-width: $xl) {
+		@content;
+	}
+}
+

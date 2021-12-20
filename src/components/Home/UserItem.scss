@@ -1,0 +1,30 @@
+@import "src/styles/constants";
+@import "src/styles/mixins";
+
+.userItem {
+	padding: 18px 12px;
+	border: $border;
+	transition: $transition;
+	@include flex(space-between, center);
+
+	.userItem-img {
+		@include size(60px, 60px, 50%);
+		margin-right: 60px;
+	}
+
+	.userItem-name {
+		flex: 1 1 33.333%;
+	}
+
+	&:hover {
+		border: 1px solid $borderBlueColor;
+		box-shadow: $boxShadow;
+	}
+
+	&:first-child {
+		border-radius: 6px 6px 0 0;
+	}
+	&:last-child {
+		border-radius: 0 0 6px 6px;
+	}
+}

@@ -1,0 +1,45 @@
+@import "./styles/constants";
+@import "./styles/mixins";
+
+* {
+	box-sizing: border-box;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	border: none;
+	text-decoration: none;
+	color: $textColor;
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	touch-action: pan-x pan-y;
+	background-color: $bgDark;
+	min-height: 100vh;
+	height: 100%;
+}
+
+section {
+	max-width: $xl;
+	width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+	border-left: $border;
+	border-right: $border;
+	height: 100vh;
+	background-color: $bg;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size: inherit;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+	monospace;
+}
+
+

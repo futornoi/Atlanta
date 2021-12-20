@@ -1,0 +1,31 @@
+@import "./src/styles/constants";
+@import "./src/styles/mixins";
+
+.profile {
+	&__user-list {
+		height: 40vh !important;
+	}
+
+	&__content {
+		min-height: 270px;
+		margin: 30px 0;
+		@include flex(space-between, center);
+
+		&-avatar {
+			flex: 0 1 30%;
+			@include size(200px, 200px,12px);
+			img {
+				@include size(100%, 100%,12px);
+				object-fit: cover;
+			}
+		}
+
+		&-contacts {
+			list-style: none;
+			flex: 0 1 60%;
+			li {
+				line-height: 30px;
+			}
+		}
+	}
+}
